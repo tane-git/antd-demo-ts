@@ -10,7 +10,7 @@ const { Header, Content, Footer } = Layout;
 const App: FC = () => (
   <div className="App">
     <Layout>
-      <Header className="header">
+      <Header>
         <Nav />
       </Header>
       <Content>

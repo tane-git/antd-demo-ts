@@ -6,7 +6,6 @@ import { Col, Menu, Row } from 'antd';
 // const { SubMenu } = Menu;
 
 // internal
-// import logo from './img/logo.png';
 import logo from './img/logo.svg';
 import logIn from './img/logIn.svg';
 
@@ -33,13 +32,11 @@ export const Nav: React.FC = () => {
     <>
       <Row>
         <Col span={6}>
-          {/* logo */}
           <img src={logo} alt="logo" />
         </Col>
 
         <Col span={12}>
           <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-            {/* menu items */}
             {links.map((link: string) => (
               <Menu.Item key={link}>
                 {link}
