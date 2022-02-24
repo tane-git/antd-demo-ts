@@ -32,12 +32,12 @@ export const Nav: React.FC = () => {
   return (
     <>
       <Row>
-        <Col span={8}>
+        <Col span={6}>
           {/* logo */}
           <img src={logo} alt="logo" />
         </Col>
 
-        <Col span={8}>
+        <Col span={12}>
           <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
             {/* menu items */}
             {links.map((link: string) => (
@@ -48,7 +48,7 @@ export const Nav: React.FC = () => {
           </Menu>
         </Col>
 
-        <Col span={8}>
+        <Col span={6}>
           <img src={logIn} alt="logIn" />
         </Col>
       </Row>
