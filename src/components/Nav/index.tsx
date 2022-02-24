@@ -8,6 +8,7 @@ import { Col, Menu, Row } from 'antd';
 // internal
 // import logo from './img/logo.png';
 import logo from './img/logo.svg';
+import logIn from './img/logIn.svg';
 
 // Navigation Bar
 export const Nav: React.FC = () => {
@@ -36,7 +37,7 @@ export const Nav: React.FC = () => {
           <img src={logo} alt="logo" />
         </Col>
 
-        <Col span={16}>
+        <Col span={8}>
           <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
             {/* menu items */}
             {links.map((link: string) => (
@@ -45,6 +46,10 @@ export const Nav: React.FC = () => {
               </Menu.Item>
             ))}
           </Menu>
+        </Col>
+
+        <Col span={8}>
+          <img src={logIn} alt="logIn" />
         </Col>
       </Row>
     </>
