@@ -3,10 +3,22 @@ import './App.css';
 import { Grants } from './components';
 import { Nav } from './components/Nav';
 
+// antd
+import { Layout, Menu, Breadcrumb } from 'antd';
+const { Header, Content, Footer } = Layout;
+
 const App: FC = () => (
   <div className="App">
-    <Nav />
-    <Grants />
+    <Layout>
+      <Header className="header">
+        <Nav />
+      </Header>
+      <Content>
+        <Grants />
+      </Content>
+      <Footer>
+      </Footer>
+    </Layout>
   </div>
 );
 
