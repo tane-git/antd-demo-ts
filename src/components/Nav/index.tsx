@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // antd
-import { Menu } from 'antd';
+import { Col, Menu, Row } from 'antd';
 // import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 // const { SubMenu } = Menu;
 
@@ -17,6 +17,7 @@ export const Nav: React.FC = () => {
     setCurrent(e.key);
   };
 
+  // Configure the links the menu will display:
   const links: string[] = [
     'Home',
     'Explorer',
@@ -25,19 +26,27 @@ export const Nav: React.FC = () => {
     'Documentation',
     'GitHub'
   ]
+  // Refactor to require links to be passed to component?
 
   return (
-    <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-      {/* logo */}
-      <img src={logo} alt="logo" />
+    <>
+      <Row>
+        <Col span={8}>
+          {/* logo */}
+          <img src={logo} alt="logo" />
+        </Col>
 
-      {/* menu items */}
-      {links.map((link: string) => (
-        <Menu.Item key={link}>
-          {link}
-        </Menu.Item>
-      ))}
-    </Menu>
-
+        <Col span={16}>
+          <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+            {/* menu items */}
+            {links.map((link: string) => (
+              <Menu.Item key={link}>
+                {link}
+              </Menu.Item>
+            ))}
+          </Menu>
+        </Col>
+      </Row>
+    </>
   );
 }
