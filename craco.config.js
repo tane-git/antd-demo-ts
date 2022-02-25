@@ -8,9 +8,8 @@ module.exports = {
         lessLoaderOptions: {
           lessOptions: {
             modifyVars: {
-              '@primary-color': '#1DA57A',
-              '@layout-header-background': '#F9FAFB',
-              '@component-background': '#F9FAFB'
+              // we can override antd variables here, or alternatively in src/styles/theme/theme.less
+              // '@primary-color': '#1DA57A',
             },
             javascriptEnabled: true,
           },
