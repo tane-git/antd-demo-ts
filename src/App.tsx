@@ -10,7 +10,9 @@ const { Header, Content, Footer } = Layout;
 const App: FC = () => (
   <div className="App">
     <Layout>
-      <Header>
+      {/* we can override styles with tailwind here */}
+      {/* <Header className='bg-red-500'> */}
+      <Header >
         <Nav />
       </Header>
       <Content>

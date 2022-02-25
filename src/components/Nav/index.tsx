@@ -29,14 +29,15 @@ export const Nav: React.FC = () => {
   // Refactor to require links to be passed to component?
 
   return (
-    <>
+    <div >
       <Row>
         <Col span={6}>
+        {/* <Col span={6} className='bg-red-400 items-end custom'> */}
           <img src={logo} alt="logo" />
         </Col>
 
         <Col span={12}>
-          <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+          <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal" >
             {links.map((link: string) => (
               <Menu.Item key={link}>
                 {link}
@@ -49,6 +50,6 @@ export const Nav: React.FC = () => {
           <img src={logIn} alt="logIn" />
         </Col>
       </Row>
-    </>
+    </div>
   );
 }
