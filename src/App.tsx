@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './App.css';
+import './App.less';
 import { Grants } from './components';
 import { Nav } from './components/Nav';
 
